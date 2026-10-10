@@ -9,7 +9,7 @@
 [![No Malware](https://img.shields.io/badge/No-Malware-brightgreen)]()
 [![No PII](https://img.shields.io/badge/No-PII-brightgreen)]()
 
-![WHITENET](ShinyHunter.png)
+![WHITENET](ShinyHunters.png)
 
 > **Aviso:** Este repositorio contiene inteligencia de amenazas de fuentes
 > públicas con fines **defensivos, educativos y de denuncia**. No contiene
