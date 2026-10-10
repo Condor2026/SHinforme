@@ -1,0 +1,566 @@
+
+
+# INFORME DE INTELIGENCIA DE AMENAZAS CIBERNÉTICAS (CTI)
+## CLASIFICACIÓN: TLP:RED – USO EXCLUSIVO PARA EQUIPOS DE RESPUESTA
+**Fecha de compilación:** 10 de octubre de 2026
+**Analista:** Unidad de Ciberinteligencia
+**Fuentes:** OSINT (Telegram), Logs de monitorización automatizada (canal 1/692), Capturas de pantalla de infraestructura de canales, Extracción de archivos CSV, Archivo 1.txt.
+**Objetivo:** Análisis integral del ecosistema ShinyHunters (SH), UNC6783, UNC6040prt2, BreachForums, Aegis Escrow y afiliados.
+
+---
+
+## FASE 1: INTRODUCCIÓN Y ALCANCE
+
+### 1.1. Propósito
+Este documento constituye un Informe de Inteligencia de Amenazas Cibernéticas (CTI) de nivel táctico, operacional y estratégico. Su objetivo es diseccionar la infraestructura, tácticas, procedimientos y objetivos del colectivo **ShinyHunters (SH)** y sus afiliados, basándose en la evidencia recolectada durante la monitorización de canales de Telegram entre mayo y octubre de 2026.
+
+### 1.2. Alcance
+El informe abarca:
+- Infraestructura de canales y grupos en Telegram.
+- Indicadores de Compromiso (IOCs) técnicos: Session IDs, correos, claves PGP, dominios, enlaces, archivos.
+- Tácticas, Técnicas y Procedimientos (TTPs) detallados.
+- Análisis de campañas de extorsión y filtración.
+- Listado exhaustivo de objetivos (víctimas potenciales y confirmadas).
+- Cronología detallada de eventos.
+- Análisis predictivo y recomendaciones estratégicas.
+- Datos extraídos de bases de datos filtradas (CSV).
+
+### 1.3. Nivel de Amenaza
+**CRÍTICO (5/5).** La organización demuestra capacidad para:
+- Extorsionar a gobiernos y corporaciones multinacionales.
+- Vender accesos iniciales a infraestructuras críticas.
+- Filtrar cientos de gigabytes de datos sensibles.
+- Fusionarse con otros grupos para aumentar su capacidad ofensiva.
+- Operar con servicios de escrow profesionalizados.
+
+---
+
+## FASE 2: INFRAESTRUCTURA DE LA AMENAZA
+
+### 2.1. Canales Oficiales de ShinyHunters
+| Canal | Enlace | Estado | Información Clave |
+|-------|--------|--------|-------------------|
+| `@shinyhuntersco` | `t.me/shinyhuntersco` | Activo | Canal principal. PGP `SH_PGP.txt`. Dominios oficiales: `shinyhunters.co`, `breached.hn`. Advierten que otros sitios son honeypots. |
+| `@ShinyHunters1channel` | `t.me/ShinyHunters1channel` | Activo | Respaldo. Creado 09-05-2026. Usa `@Safeguard` para verificación de humanidad. |
+| `@ShinyHunterCorp` | `t.me/ShinyHunterCorp` | Activo | Listados masivos de objetivos (Francia) y bases de datos (`4z6mgd Full BF Database 2025`). |
+| `@Breachforumsh` | `t.me/Breachforumsh` | Activo | Anuncio de reapertura de BreachForums tras incautación de `bf.st`. |
+| `@ShinyEquationCartel` | `t.me/ShinyEquationCartel` | Emergente | Fusión con "Equation". |
+
+### 2.2. Canales de Afiliados y Operaciones
+| Canal | Enlace | Estado | Información Clave |
+|-------|--------|--------|-------------------|
+| `@UNC6040prt2` | `t.me/UNC6040prt2` | Activo | Extorsiones, venta de bases de datos (Adobe, LinkedIn, Correios), nueva PGP, enlaces a Aegis Escrow. |
+| `@UNC6783` | `t.me/UNC6783` | Activo | Canal de "Mr. Raccoon". Listados de rescates masivos, bases de datos (832 GB), H&M 10TB, GTA-V, Cisco, LinkedIn. |
+| `@frenchhackerstchat` | `t.me/frenchhackerstchat` | Activo | 1,185 miembros. Chat comunitario. |
+| `@BF_File_bot` | `t.me/BF_File_bot` | Activo | Bot OSINT con programa de afiliados del 80%. |
+| `@aegismiddleman` | `t.me/aegismiddleman` | Activo | Servicio de escrow (Aegis Escrow). Fundador: `@egisasa`. Enlace: `https://t.me/vouchaegis`. |
+| `@eshinuhunters` | `t.me/eshinuhunters` | Inactivo | Fallback fallido. |
+| `@fbi_breachforums` | `t.me/fbi_breachforums` | Inactivo | Fallback fallido. |
+
+### 2.3. Estructura DEDALE (Grupos Privados)
+- Carpeta: `https://t.me/addlist/5uRg7aKaIP84YjJl`
+- Grupos:
+- `DEDALE | CHAT` (92 miembros)
+- `DEDALE | DATABASE` (95 miembros)
+- `Dedale Vouches` (169 suscriptores)
+- Descripción: "2 CHANNELS DEDALE PRIVATE FILE - Military Document Database..."
+
+### 2.4. Canales Externos Monitorizados (No relacionados directamente)
+- `@russkiy_opolchenec`: Canal de propaganda/noticias sobre el conflicto Ucrania-Rusia. Menciona misiles balísticos, drones, ayuda alemana. No es parte del ecosistema SH, pero fue capturado por el escáner.
+
+---
+
+## FASE 3: INDICADORES DE COMPROMISO (IOCs) – LISTADO COMPLETO
+
+### 3.1. Session IDs (Contacto Cifrado)
+- `05cd1b4d112bc03c6512b030de865af03468530566d22c82c48737ac1c9a433421` (SH principal)
+- `0501da0be27ccac7d4cec7ca1a84e946e3c7dfa9c4da49552b5f32d69980596d7b` (UNC6040prt2 / SH nuevo)
+- `059f67bc279489821d01655e37398da926063906cebd23a69a1949962a3112670f` (UNC6783 / Mr. Raccoon)
+
+### 3.2. Correos Electrónicos de Contacto y Venta
+- `shinyprocorp@proton.me` (Contacto oficial SH)
+- `jayson.gesim@everymatrix.com` (Vendedor de accesos PartnerMatrix)
+- `olybetadmin@olybet.com`
+- `support@terravox.net`
+- `wpn@pmi.com`
+- `ihor.b@lineir.me`
+- `brett.rodriguez@everymatrix.com`
+- `aleksandar.b@place.bet`
+- `747live@pmi.com`
+
+### 3.3. Claves PGP
+- **Original:** `SH_PGP.txt` (en `@shinyhuntersco`)
+- **Nueva (10-10-2026):** `https://pastebin.com/J0pwFRLq`
+- **Fingerprint:** `8043 7923 DD43 265D 9447 C1FC 7A5E 1625 DD95 AA78`
+- **Key ID:** `7A5E 1625 DD95 AA78`
+- **Algoritmo:** RSA 2048
+
+### 3.4. Dominios y Enlaces de Infraestructura
+- Clearnet oficial: `shinyhunters.co`, `breached.hn`
+- Espejos: `shinyhunters.red`, `shinyhunters.group`
+- Foros: `breachforums.bf`, `bf.st`
+- Enlaces de invitación a canales:
+- `https://t.me/+Io0K8nltlsEzZjk1` (SH Channel)
+- `https://t.me/+9dxXmjteLXMyMGI1` (SH Group)
+- `https://t.me/+is1gFZnRfK40YmY1` (SH - PART 2)
+- `https://t.me/+QtwXY6nRr_8wODI1` (SH - PART 3)
+- `https://t.me/+knSjTUFyz2k5N2U1` (SH - PART 4)
+- `https://t.me/+DrRnoicKhmM2NjBl` (SH - PART 5)
+- `https://t.me/+VcDh8VHMbrwzZDFk` (BF Chat)
+- Servicio de Escrow: `https://t.me/aegismiddleman`, `https://t.me/vouchaegis`
+- Fundador de Aegis: `@egisasa`
+
+### 3.5. Archivos Maliciosos y Bases de Datos
+- `4z6mgd (Full BF Database 2025-0... 7z` – 45.7 MB (subido 08-10-2026)
+- Bases de datos de "Mr. Raccoon" (UNC6783):
+- SendGrid: 1,264,800 líneas (0.4 GB)
+- HubSpot: 1,522,250 líneas (1.2 GB)
+- Mailgun: 1,424,900 líneas (1.1 GB)
+- MailJet: 414,700 líneas (0.3 GB)
+- Brevo: 522,400 líneas (0.4 GB)
+- Mandrill: 943,500 líneas (0.7 GB)
+- MailChimp: 4,201,900 líneas (3.5 GB)
+- **Total:** 832 GB, 13 millones de tickets.
+- **LinkedIn:** 700 millones de registros (Parte 5, 187 GB)
+- **FBI:** $10,000 USD por 25 compradores
+- **Correios:** $100,000 USD (extorsión)
+- **H&M Group:** 10 TB de datos internos, clientes, empleados y socios comerciales
+- **Adobe:** 832 GB / 15k empleados + 13M tickets ($65K USD)
+- **Cisco:** 1.3 TB / 1 Billón ($60K USD)
+- **Rockstar:** 78.8M + login access ($50K USD)
+- **Crypto usuarios chinos:** 61M ($45K USD)
+- **Mailpas:** 6.4 billones ($15K USD)
+- **Google Salesforce:** 3 TB ($70K USD)
+- **IDF (Israel):** 200M ($20K USD)
+- **CHG Healthcare:** 1 TB ($30K USD)
+- **Investment Australia:** 23.6M ($10K USD)
+- **Xiaomi China DB:** ($20K USD)
+- **Italy business:** 5.5M ($5K USD)
+- **USMC:** ($100K USD)
+- **Vercel Inc:** ($20K USD)
+- **BSNL Indian:** ($10K USD)
+- **Samsung DB:** ($80K USD)
+- **NSCC:** 10 PB ($1M USD)
+- **FBI & CIA:** ($20K USD)
+- **SHGH:** 960M/1B/400GB ($15K USD)
+- **B2B zhuohi.com:** 4.2M ($2240 USD)
+- **CIC.GOV.VN:** 160M ($25K USD)
+- **zhigong.yibao.cn:** 80M ($2860 USD)
+- **meituan.com:** 36M ($3980 USD)
+- **sakainvest.com:** 500K ($1120 USD)
+- **smida.gov.ua:** 327K ($1200 USD)
+- **Qantas Airlines y Vietnam Airlines:** datos de vuelo (anunciados)
+- **Health Policy And Services Research:** 18.6 GB
+- **India country data (ministries):** 28.2 GB
+- **INE-CCNP Enterprise:** 68.2 GB
+- **Leland Campbell Kondratoff Persick:** 295 GB
+- **Israel Ministry Of Justice:** 115 GB
+- **GTA-V source code and data:** 71.9 GB
+- **GTA-V source code full:** +15.5 GB
+- **FHR Electric:** 71.7 GB
+- **Cisco DB:** +215 GB
+
+### 3.6. Correos y Teléfonos Filtrados (Muestra)
+- `olybetadmin@olybet.com` (Olybet Test - Admin)
+- `support@terravox.net` (Pokerdom - Support)
+- `wpn@pmi.com` (WPN Affiliates - Sebas WPM)
+- `ihor.b@lineir.me` (Rolly_io - Ihor PMI)
+- `brett.rodriguez@everymatrix.com` (Admin - Brett Rodriguez)
+- `aleksandar.b@place.bet` (Place.bet - Aleksandar Brajkovski)
+- `747live@pmi.com` (747liveBet test)
+- `@docomo.ne.jp` - 3,195,981 líneas
+- `@i.softbank.jp` - 3,330,167 líneas
+- `@ezweb.ne.jp` - 3,479,894 líneas
+
+### 3.7. Datos de la Base de Datos de Correos (Ejemplo CSV)
+```
+4849,"olybetadmin@olybet.com","Olybet Test","No","active","Olybet admin test","2026-08-20T13:15:58Z","2026-08-20T13:15:58Z"
+4848,"support@terravox.net","Pokerdom","No","active","Support PD","2026-08-18T10:44:01Z","2026-08-18T13:59:16Z"
+4847,"wpn@pmi.com","WPN Affiliates","No","active","Sebas WPM Affiliates","2026-08-17T07:51:00Z","2026-08-17T07:51:00Z"
+4754,"ihor.b@lineir.me","Rolly_io","No","active","Ihor PMI","2026-06-30T09:58:49Z","2026-08-11T07:48:51Z"
+2879,"brett.rodriguez@everymatrix.com","Admin Admin","No","active","Brett Rodriguez","2024-08-07T04:35:38Z","2026-08-11T07:48:27Z"
+4824,"aleksandar.b@place.bet","Place.bet","No","active","Aleksandar Brajkovski","2026-07-29T11:05:11Z","2026-08-07T10:42:26Z"
+4845,"747live@pmi.com","747live","No","active","747liveBet test","2026-08-05T09:06:57Z","2026-08-05T09:06:57Z"
+```
+
+### 3.8. Correos y Teléfonos Filtrados (Base de Datos Adobe/Marketing)
+- Sendgrid: 625k teléfonos únicos, 515K emails únicos.
+- HubSpot: 810k teléfonos únicos, 764K emails únicos.
+- MailGun: 534k teléfonos únicos, 485K emails únicos.
+- MailJet: 168k teléfonos únicos, 188K emails únicos.
+- Brevo: 199k teléfonos únicos, 256K emails únicos.
+- Mandrill: 443k teléfonos únicos, 463K emails únicos.
+- MailChimp: 508k teléfonos únicos, 2M emails únicos.
+
+### 3.9. Enlaces a Foros y Pastebin
+- `https://breachforums.bf/Thread-DATABASE-DELL-DATABASE-New?pid=1248799#pid1248799`
+- `https://x.com/i/stat...848359938981955`
+- `https://x.com/i/stat...217869931905212`
+- `https://x.com/i/stat...71065140859217`
+- `https://pastebin.com/J0pwFRLq` (PGP nueva)
+
+---
+
+## FASE 4: TÁCTICAS, TÉCNICAS Y PROCEDIMIENTOS (TTPs)
+
+### 4.1. Extorsión "Pay or Leak"
+- **Mecanismo:** Ultimátum de 72 horas. Si no pagan, filtran y venden los datos.
+- **Caso Correios (10-10-2026):** Infiltración total. Exigen $100,000 USD. Amenazan con filtrar PII, registros financieros y archivos operativos. *"Do not play games with us. Clock is ticking."*
+- **Caso PartnerMatrix:** Ultimátum similar por filtración de paneles de administración y registros de usuarios.
+- **Caso UNC6783:** Listado extenso de rescates (Adobe $65K, Cisco $60K, Rockstar $50K, USMC $100K, NSCC $1M, etc.).
+
+### 4.2. Venta de Accesos Iniciales de Alto Privilegio (IAB)
+Ofrecen acceso a:
+- Verizon
+- Microsoft Azure (Tenants)
+- NBA (Internal Networks)
+- PragmaticPlay
+- PartnerMatrix
+- H&M Group (10TB de datos internos, clientes y empleados)
+
+### 4.3. Filtración y Venta de Bases de Datos Masivas
+- **"Mr. Raccoon" (UNC6783):** 832 GB de bases de datos, 13 millones de tickets.
+- **LinkedIn:** 700 millones de registros (Parte 5, 187 GB).
+- **FBI:** Venta de datos de "FBI Jobs/recruitment, HR, MedLink, Criminal Justice (CJ/CJIS)" por $10,000 USD.
+- **GTA-V:** Código fuente y datos (71.9 GB + 15.5 GB).
+- **Cisco:** +215 GB.
+- **Israel Ministry Of Justice:** 115 GB.
+- **India ministries:** 28.2 GB.
+- **Health Policy:** 18.6 GB.
+- **INE-CCNP Enterprise:** 68.2 GB.
+- **Leland Campbell Kondratoff Persick:** 295 GB.
+- **FHR Electric:** 71.7 GB.
+
+### 4.4. Campaña de Reconocimiento y Enumeración de Objetivos (Francia)
+Listado masivo publicado en `@ShinyHunterCorp` (2024-2026). Sectores:
+- **Gobierno:** France Travail, Ministerio del Interior, ANTS, France Identité, FranceConnect, URSSAF, CAF, CPAM, CNAM, FICOBA/DGFiP, OFII.
+- **Telecomunicaciones:** Free, Bouygues, SFR, Orange, La Poste Mobile, Lebara, Syma, Prixtel, NRJ Mobile, Coriolis.
+- **Salud:** Viamedis & Almerys, Cegedim Santé, AP-HP, CHU Lille, CHU Rouen, Doctolib, Alan, Ramsay Santé, Cerballiance, Biogroup, Inovie, MGEN, Harmonie Mutuelle, AG2R, Malakoff Humanis, AXA, MAIF, MACIF, Groupama, Allianz.
+- **Banca:** Boursorama, BNP Paribas, Société Générale, Crédit Agricole, Crédit Mutuel, CIC, Banque Postale, Nickel, Revolut, Lydia, Qonto, PayPal, Banque de France.
+- **Retail:** Fnac Darty, Conforama, Decathlon, Cultura, Boulanger, LDLC, Cdiscount, Veepee, Showroomprivé, Sephora, Carrefour, Auchan, Leclerc, Intermarché, Monoprix, Casino, Lidl, Aldi, Leroy Merlin, Castorama, Brico Dépôt, Back Market, Rakuten, Vestiaire Collective, Leboncoin, eBay, Amazon.
+- **Transporte:** SNCF, RATP, Air France, Corsair, Transavia, BlaBlaCar, Uber, Deliveroo, Vinci Autoroutes.
+- **Energía:** EDF, Engie, TotalEnergies, Veolia, Suez.
+- **Entretenimiento:** Ubisoft, Steam, Riot Games, Epic Games, PlayStation, Xbox, Deezer, Canal+, TF1+, M6+, France Télévisions, Dailymotion, Twitch, Jeuxvideo.com, Le Parisien, Ouest-France, Le Figaro, Le Point.
+- **Educación:** Éducation nationale, Sorbonne, Paris-Saclay, CROUS, Pix, OpenClassrooms, Epitech.
+- **Deportes:** Federaciones de Fútbol, Rugby, Tenis, Gimnasia, etc.
+
+### 4.5. Medidas de Seguridad Operativa (OpSec)
+- Verificación de humanidad con `@Safeguard`.
+- Uso de PGP.
+- Canales de respaldo (Part 2, 3, 4, 5).
+- Advertencia sobre "honeypots" y falsos contactos.
+- Verificación vía `@reyswap`.
+- Uso de Session IDs para comunicaciones cifradas.
+- Servicio de escrow para transacciones seguras.
+
+### 4.6. Tácticas de Guerra Psicológica
+- Anuncio falso de venta de datos del FBI/CIA.
+- Referencia a "FreeRey" (posible miembro encarcelado).
+- Publicación de mensajes como "POV FBI: We're sorry... The request has been blocked."
+- Amenazas de publicación masiva si no se negocia.
+
+---
+
+## FASE 5: CRONOLOGÍA DETALLADA DE EVENTOS (SEGÚN LOGS)
+
+| Fecha | Evento |
+|-------|--------|
+| 09-05-2026 | Creación de `@ShinyHunters1channel` (respaldo). |
+| 17-05-2026 | Publicación masiva de listados de objetivos franceses en `@ShinyHunterCorp`. |
+| 10-06-2026 | Creación de `@shinyhuntersco` y publicación de PGP. |
+| 18-06-2026 | Problemas técnicos con registrador, caída de `shinyhunters.co`. |
+| 05-10-2026 | Creación de `@Breachforumsh` para reapertura de BreachForums. |
+| 08-10-2026 | Subida de `4z6mgd (Full BF Database 2025-0...)` a `@ShinyHunterCorp`. |
+| 08-10-2026 | UNC6783 publica listado de rescates masivos (Adobe, Cisco, Rockstar, etc.). |
+| 08-10-2026 | UNC6783 publica 10TB de H&M Group. |
+| 08-10-2026 | UNC6783 anuncia publicación de datos de Qantas y Vietnam Airlines. |
+| 09-10-2026 | UNC6783 publica múltiples bases de datos (18.6GB, 28.2GB, 68.2GB, 295GB, 115GB, 187GB LinkedIn, 71.9GB GTA-V, 71.7GB FHR Electric, 215GB Cisco). |
+| 09-10-2026 | Creación de `@aegismiddleman` (Aegis Escrow). |
+| 10-10-2026 | Nueva PGP y Session ID en `@UNC6040prt2`. |
+| 10-10-2026 | Extorsión a Correios ($100k, 72 horas). |
+| 10-10-2026 | Fusión ShinyEquationCartel. |
+| 10-10-2026 | Venta datos FBI ($10k). |
+| 10-10-2026 | Difusión de enlaces a Aegis Escrow. |
+| 10-10-2026 | Publicación de mensaje "POV FBI: We're sorry... The request has been blocked." |
+
+---
+
+## FASE 6: ANÁLISIS PREDICTIVO E INTELIGENCIA AVANZADA
+
+1. **Consolidación del cartel:** ShinyEquationCartel aumentará capacidad de ataque coordinado (ransomware + extorsión de datos).
+2. **Mercantilización de BreachForums:** Convertirán el foro en mercado centralizado con comisiones.
+3. **Automatización de extorsiones:** Uso de bots (`@BF_File_bot`) y listados masivos para escalar.
+4. **Ataques a cadena de suministro:** Venta de accesos a Azure, Verizon, etc. Buscan llaves de entrada a infraestructuras críticas.
+5. **Guerra psicológica:** Anuncios falsos (FBI) y referencias a miembros encarcelados ("FreeRey") para desmoralizar.
+6. **Expansión de objetivos:** El enfoque en Francia se mantiene, pero los listados de UNC6783 abarcan objetivos globales (Adobe, Cisco, Rockstar, Samsung, Xiaomi, Israel, India, Australia, Vietnam, Ucrania, etc.).
+7. **Nuevos mercados:** La inclusión de datos de Qantas y Vietnam Airlines sugiere un interés en el sector de aviación.
+8. **Colaboración entre afiliados:** UNC6783 y UNC6040prt2 comparten recursos y se promocionan mutuamente, lo que indica una red criminal coordinada.
+9. **Uso de escrow:** La creación de Aegis Escrow indica una profesionalización de sus transacciones, buscando reducir el riesgo de estafas entre criminales.
+10. **Posible infiltración en gobiernos:** Los listados de Francia, Israel, India, Vietnam y Ucrania sugieren un interés en datos gubernamentales y de defensa.
+11. **Ataques a la industria del entretenimiento:** GTA-V, Rockstar, Ubisoft, Steam, Riot Games, Epic Games, PlayStation, Xbox.
+12. **Ataques a la industria de la salud:** CHG Healthcare, Health Policy And Services Research, hospitales franceses, laboratorios.
+13. **Ataques a la industria de telecomunicaciones:** Cisco, Verizon, Free, Bouygues, SFR, Orange, etc.
+14. **Ataques a la industria financiera:** Boursorama, BNP Paribas, Société Générale, Crédit Agricole, etc.
+15. **Ataques a la industria de la aviación:** Qantas Airlines, Vietnam Airlines.
+
+---
+
+## FASE 7: RECOMENDACIONES ESTRATÉGICAS
+
+### 7.1. Para Equipos de Respuesta (CERT/SOC)
+- Bloquear todos los IOCs de la Sección 3.
+- Monitorizar credenciales de correos listados.
+- Analizar tráfico hacia dominios Clearnet y enlaces de Telegram.
+- Vigilar los canales `@UNC6783` y `@UNC6040prt2` para nuevas publicaciones.
+- Implementar reglas de detección para los Session IDs y fingerprints PGP.
+- Monitorizar la creación de nuevos canales de respaldo (Part 6, 7, etc.).
+- Vigilar el canal `@ShinyEquationCartel` para nuevas actividades.
+
+### 7.2. Para CISO / Dirección de Seguridad
+- Notificar a entidades listadas en la Sección 4.4.
+- Realizar simulacros de extorsión (72 horas).
+- Evaluar postura de seguridad de proveedores mencionados.
+- Revisar controles de acceso a bases de datos de clientes y empleados.
+- Considerar la contratación de servicios de monitoreo de dark web.
+- Implementar autenticación multifactor (MFA) en todos los accesos críticos.
+- Revisar la seguridad de la cadena de suministro (proveedores como PartnerMatrix, Verizon, Microsoft Azure).
+- Establecer planes de respuesta a incidentes específicos para extorsión de datos.
+- Capacitar a los empleados sobre phishing y ingeniería social.
+
+### 7.3. Para Inteligencia y Análisis
+- Infiltrar canales de respaldo (Part 2-5) y `@ShinyEquationCartel`.
+- Analizar archivo `4z6mgd` si se obtiene.
+- Seguir a "Mr. Raccoon" (UNC6783) por su base de 832 GB.
+- Monitorizar `@aegismiddleman` para identificar transacciones de escrow.
+- Establecer cooperación con CERTs internacionales (Francia, Israel, India, Vietnam, Australia, Ucrania, Brasil, Estados Unidos, China).
+- Realizar análisis de vinculación entre ShinyHunters, UNC6783 y UNC6040prt2.
+- Monitorizar la posible aparición de nuevos afiliados.
+- Analizar el código fuente de GTA-V filtrado para identificar posibles vulnerabilidades explotadas.
+- Monitorizar la venta de datos de Qantas y Vietnam Airlines.
+
+### 7.4. Para Legisladores y Reguladores
+- Considerar la creación de leyes más estrictas contra la extorsión de datos.
+- Facilitar la cooperación internacional para la persecución de estos grupos.
+- Promover la adopción de estándares de seguridad más altos en las empresas.
+- Crear incentivos para que las empresas reporten incidentes de seguridad.
+
+---
+
+## FASE 8: CONCLUSIÓN
+
+ShinyHunters es una **hidra criminal en expansión**. La fusión con Equation, la reapertura de BreachForums y la campaña sistemática en Francia indican una nueva era de ciberdelincuencia organizada. La información aquí presentada es el mapa de su red. La comunidad de ciberdefensa debe actuar con urgencia.
+
+---
+
+# ANEXO B: INFORMACIÓN FALTANTE – ANÁLISIS, DATOS Y CONTEXTO
+
+## B.1. LISTADO COMPLETO DE OBJETIVOS – FRANCIA (PARTE 4)
+
+* Le Point | 2025-2026 | News media
+* Discord France communities | 2024-2026 | Community platform
+* Telegram France communities | 2024-2026 | Messaging platform
+* WhatsApp France datasets | 2025-2026 | Messaging platform
+* Signal France users | 2025-2026 | Messaging platform
+* Meetic France | 2025-2026 | Dating platform
+* Tinder France | 2025-2026 | Dating platform
+* Happn | 2025-2026 | Dating platform
+* Pap.fr | 2025-2026 | Real estate
+* SeLoger | 2025-2026 | Real estate
+* Bien'ici | 2025-2026 | Real estate
+* Nexity | 2025-2026 | Real estate
+* Foncia | 2025-2026 | Real estate
+* Adecco France | 2025-2026 | Recruitment / HR
+* Randstad France | 2025-2026 | Recruitment / HR
+* Expectra | 2025-2026 | Recruitment
+* HelloWork | 2025-2026 | Recruitment platform
+* LinkedIn France datasets | 2025-2026 | Professional networking
+* PayFit | 2025-2026 | HR / payroll SaaS
+* Silae | 2025-2026 | Payroll software
+* Pennylane | 2025-2026 | Accounting SaaS
+* SAP France customers | 2025-2026 | Enterprise software
+* Salesforce France customers | 2025-2026 | CRM / SaaS
+* CNRS | 2025-2026 | Public research
+* French local authorities (multiple) | 2024-2026 | Local government
+* French city halls (multiple) | 2024-2026 | Local government
+* Paris City Hall | 2025-2026 | Local government
+* French departments (multiple) | 2024-2026 | Regional administration
+* French regions (multiple) | 2024-2026 | Regional administration
+* OFII | 2026 | Government / immigration
+* Permis / SIV Nouvelle-Calédonie | 2025-2026 | Government / vehicle registration
+* FDJ | 2025-2026 | Gambling
+* Betclic | 2025-2026 | Sports betting
+* Winamax | 2025-2026 | Online betting
+* PMU | 2025-2026 | Betting / horse racing
+* Norauto | 2025-2026 | Automotive retail
+* Feu Vert | 2025-2026 | Automotive retail
+* Oscaro | 2025-2026 | Automotive e-commerce
+* Renault connected services | 2025-2026 | Automotive
+* Peugeot / Stellantis France | 2025-2026 | Automotive
+* Tesla France customers | 2025-2026 | Automotive / EV
+* Naval Group (ex-DCNS) | 2010s-2025 | Defense / naval systems
+* Orange (historic incidents) | 2014 | Telecom
+* Domino's Pizza France | 2014 | Food retail
+* Apollo.io (French records) | 2018 | Marketing / data brokerage
+* Alinto | 2026 | Email / cybersecurity services
+* French Citizens aggregated datasets | 2024-2026 | Aggregated breach compilation
+* La France Insoumise | 2025-2026 | Political organization
+
+---
+
+## B.2. LISTADO COMPLETO DE OBJETIVOS – GLOBAL (UNC6783)
+
+* business.adobe.com – 832GB / 15k empleados + 13M tickets – $65K USD
+* Cisco System Inc – 1.3TB / 1 Billón – $60K USD
+* ROCKSTAR – 78.8M + LOGIN ACCESS – $50K USD
+* Crypto user from Chinese – 61M – $45K USD
+* MAILPAS – 6.4 billones – $15K USD
+* Google Salesforce – 3TB – $70K USD
+* Israel Defense Force IDF – 200M – $20K USD
+* CHG Healthcare – 1TB – $30K USD
+* Investment Australia – 23.6M – $10K USD
+* Xiaomi China DB – $20K USD
+* Italy business – 5.5M – $5K USD
+* USMC – $100K USD
+* Vercel Inc / vercel.com – $20K USD
+* BSNL INDIAN – $10K USD
+* Samsung DB – $80K USD
+* NSCC – 10PB – $1M USD
+* FBI & CIA – $20K USD
+* SHGH – 960M/1B/400GB – $15K USD
+* B2B zhuohi.com – 4.2M – $2240 USD
+* CIC.GOV.VN – 160M – $25K USD
+* zhigong.yibao.cn – 80M – $2860 USD
+* meituan.com – 36M – $3980 USD
+* sakainvest.com – 500K – $1120 USD
+* smida.gov.ua – 327K – $1200 USD
+* Qantas Airlines – datos de vuelo
+* Vietnam Airlines – datos de vuelo
+* Health Policy And Services Research – 18.6 GB
+* India country data (ministries of India) – 28.2 GB
+* INE-CCNP Enterprise – 68.2 GB
+* Leland Campbell Kondratoff Persick – 295 GB
+* Israel Ministry Of Justice – 115 GB
+* LinkedIn – 700 millones de registros (Parte 5, 187 GB)
+* GTA-V source code and data – 71.9 GB
+* GTA-V source code full – +15.5 GB
+* FHR Electric – 71.7 GB
+* Cisco DB – +215 GB
+
+---
+
+## B.3. DATOS EXTRAÍDOS DE BASES DE DATOS (CSV)
+
+### B.3.1. Base de Datos Adobe/Marketing
+- SendGrid: 1,264,800 líneas únicas – 625k teléfonos únicos – 515K emails únicos
+- HubSpot: 1,522,250 líneas únicas – 810k teléfonos únicos – 764K emails únicos
+- Mailgun: 1,424,900 líneas únicas – 534k teléfonos únicos – 485K emails únicos
+- MailJet: 414,700 líneas únicas – 168k teléfonos únicos – 188K emails únicos
+- Brevo: 522,400 líneas únicas – 199k teléfonos únicos – 256K emails únicos
+- Mandrill: 943,500 líneas únicas – 443k teléfonos únicos – 463K emails únicos
+- MailChimp: 4,201,900 líneas únicas – 508k teléfonos únicos – 2M emails únicos
+
+### B.3.2. Base de Datos de Correos (Ejemplo CSV)
+```
+4849,"olybetadmin@olybet.com","Olybet Test","No","active","Olybet admin test","2026-08-20T13:15:58Z","2026-08-20T13:15:58Z"
+4848,"support@terravox.net","Pokerdom","No","active","Support PD","2026-08-18T10:44:01Z","2026-08-18T13:59:16Z"
+4847,"wpn@pmi.com","WPN Affiliates","No","active","Sebas WPM Affiliates","2026-08-17T07:51:00Z","2026-08-17T07:51:00Z"
+4754,"ihor.b@lineir.me","Rolly_io","No","active","Ihor PMI","2026-06-30T09:58:49Z","2026-08-11T07:48:51Z"
+2879,"brett.rodriguez@everymatrix.com","Admin Admin","No","active","Brett Rodriguez","2024-08-07T04:35:38Z","2026-08-11T07:48:27Z"
+4824,"aleksandar.b@place.bet","Place.bet","No","active","Aleksandar Brajkovski","2026-07-29T11:05:11Z","2026-08-07T10:42:26Z"
+4845,"747live@pmi.com","747live","No","active","747liveBet test","2026-08-05T09:06:57Z","2026-08-05T09:06:57Z"
+```
+
+### B.3.3. Datos de Correos Japoneses
+- `@docomo.ne.jp` – 3,195,981 líneas
+- `@i.softbank.jp` – 3,330,167 líneas
+- `@ezweb.ne.jp` – 3,479,894 líneas
+
+---
+
+## B.4. MAPEO MITRE ATT&CK – TABLA COMPLETA
+
+| Táctica | Técnica | ID MITRE | Descripción en el contexto de SH |
+|---------|---------|----------|----------------------------------|
+| **Resource Development** | Acquire Infrastructure | T1583 | Creación de canales de Telegram, dominios Clearnet (`shinyhunters.co`, `breached.hn`), y servicios de escrow (Aegis). |
+| **Resource Development** | Establish Accounts | T1585 | Creación de cuentas en Telegram (`@shinyhuntersco`, `@UNC6783`, `@UNC6040prt2`), correos ProtonMail (`shinyprocorp@proton.me`). |
+| **Resource Development** | Compromise Accounts | T1586 | Uso de correos comprometidos (`jayson.gesim@everymatrix.com`) para vender accesos. |
+| **Initial Access** | Valid Accounts | T1078 | Venta de accesos iniciales de alto privilegio a Verizon, Microsoft Azure, NBA, PragmaticPlay, PartnerMatrix. |
+| **Initial Access** | Exploit Public-Facing Application | T1190 | Presunta explotación de vulnerabilidades en aplicaciones web para brechar bases de datos (Adobe, Cisco, etc.). |
+| **Execution** | Command and Scripting Interpreter | T1059 | Uso de scripts para exfiltración de datos y automatización de extorsiones. |
+| **Persistence** | Account Manipulation | T1098 | Creación de canales de respaldo (Part 2, 3, 4, 5) para persistir tras caídas. |
+| **Privilege Escalation** | Valid Accounts | T1078 | Uso de accesos de alto privilegio para escalar dentro de redes corporativas. |
+| **Defense Evasion** | Obfuscated Files or Information | T1027 | Uso de PGP para cifrar comunicaciones y verificar identidad. |
+| **Defense Evasion** | Impair Defenses | T1562 | Uso de `@Safeguard` para verificación de humanidad y evitar bots de monitorización. |
+| **Credential Access** | Credentials from Password Stores | T1555 | Extracción de credenciales de bases de datos filtradas (CSV con correos y teléfonos). |
+| **Discovery** | Network Service Scanning | T1046 | Enumeración masiva de objetivos en Francia (gobierno, salud, banca, telecom). |
+| **Collection** | Data from Information Repositories | T1213 | Recopilación de datos de bases de datos corporativas y gubernamentales. |
+| **Collection** | Email Collection | T1114 | Filtración de bases de datos de SendGrid, HubSpot, Mailgun, MailJet, Brevo, Mandrill, MailChimp. |
+| **Exfiltration** | Exfiltration Over Web Service | T1567 | Publicación de datos en canales de Telegram y foros (BreachForums). |
+| **Impact** | Data Encrypted for Impact | T1486 | Extorsión "Pay or Leak": amenaza con filtrar datos si no se paga rescate. |
+| **Impact** | Defacement | T1491 | Publicación de mensajes provocativos ("POV FBI: We're sorry..."). |
+
+---
+
+## B.5. ENLACES ADICIONALES (X/Twitter, BreachForums, Pastebin)
+
+- `https://breachforums.bf/Thread-DATABASE-DELL-DATABASE-New?pid=1248799#pid1248799`
+- `https://x.com/i/stat...848359938981955`
+- `https://x.com/i/stat...217869931905212`
+- `https://x.com/i/stat...71065140859217`
+- `https://pastebin.com/J0pwFRLq` (PGP nueva)
+
+---
+
+## B.6. CONTACTOS Y USUARIOS ADICIONALES
+
+- `@MR_UNC6783` (Contacto de Mr. Raccoon)
+- `@reyswap` (Verificación de identidad SH)
+- `@egisasa` (Fundador de Aegis Escrow)
+- `@Safeguard` (Bot de verificación de humanidad)
+
+---
+
+## B.7. ARCHIVOS Y NOMBRES DE ARCHIVOS
+
+- `4z6mgd (Full BF Database 2025-0... 7z` – 45.7 MB
+- `SH_PGP.txt` – 665 B
+- `Brevo.csv` – 0.4 GB
+- `HubSpot.csv` – 1.2 GB
+- `MailChimp.csv` – 3.5 GB
+- `MailGun.csv` – 1.1 GB
+- `MailJet.csv` – 0.3 GB
+- `Mandrill.csv` – 0.7 GB
+- `SendGrid.csv` – 1 GB
+
+---
+
+## B.8. FECHAS CLAVE ADICIONALES
+
+- 09-05-2026: Creación de `@ShinyHunters1channel`
+- 17-05-2026: Publicación de listados de Francia
+- 10-06-2026: Creación de `@shinyhuntersco`
+- 18-06-2026: Caída de `shinyhunters.co`
+- 05-10-2026: Creación de `@Breachforumsh`
+- 08-10-2026: Subida de `4z6mgd`
+- 08-10-2026: Publicación de H&M 10TB
+- 08-10-2026: Anuncio de Qantas y Vietnam Airlines
+- 09-10-2026: Publicación de bases de datos masivas
+- 09-10-2026: Creación de `@aegismiddleman`
+- 10-10-2026: Nueva PGP y Session ID
+- 10-10-2026: Extorsión a Correios
+- 10-10-2026: Fusión ShinyEquationCartel
+- 10-10-2026: Venta datos FBI
+- 10-10-2026: Difusión de Aegis Escrow
+
+---
+
+## B.9. ANÁLISIS ADICIONAL
+
+- **Vector de ataque principal:** Explotación de aplicaciones públicas y venta de accesos iniciales.
+- **Objetivo estratégico:** Extorsión económica y desestabilización de infraestructuras críticas.
+- **Nivel de sofisticación:** Alto. Uso de PGP, escrow, canales de respaldo, verificación de humanidad.
+- **Capacidad de expansión:** Alta. Fusión con Equation, afiliados de alto volumen (UNC6783, UNC6040prt2).
+- **Riesgo para España:** Medio-Alto. Aunque el foco principal es Francia, los listados incluyen objetivos globales y podrían extenderse a España.
+- **Recomendación inmediata:** Alerta a CERTs europeos, revisión de accesos a Azure/Verizon, monitorización de canales de Telegram.
+
+---
